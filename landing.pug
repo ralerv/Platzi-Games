@@ -1,5 +1,14 @@
--var titulo = "SubTitulo Principal"
--var titulos = ["Titulo Principal","Subtitlo 1", "Subtitulo 2", "Subtitulo 3"]
+//- Mixins
+mixin caja(imagen,titulo,contenido)
+    .caja
+        .caja__imagen: img(src="./images/"+imagen)
+        .caja__contenido
+            h2=titulo
+            p=contenido
+
+
+-var titulo = "Titulo Principal"
+-var titulos = ["Subtitlo 1", "Subtitulo 2", "Subtitulo 3"]
 doctype html
 html(lang="en")
     head
@@ -11,14 +20,17 @@ html(lang="en")
     body
         header
             h1 Platzi Games
-            a.boton Registro
+            if usuario
+                a Hola #{usuario}
+            else
+                a.boton Registro
         section.intro 
             div.intro__imagen: img(src="./images/imagen.png", alt="default-img")
             .intro__contenido 
-                h2 #{titulos[0]}
+                h2 #{titulo}
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero doloribus dolores quas facilis architecto. Dignissimos maxime, impedit eos repudiandae exercitationem nam perferendis aliquid? Voluptates laborum numquam, repellendus culpa veritatis facilis.
                     span Voluptates laborum numquam, repellendus culpa veritatis facilis
                 a.boton Leer más
-        ul
+        main.contenido
             each titulo in titulos
-                li=titulo
+                +caja("imagen.png",titulo,"Lorem ipsum dolor sit amet consectetur adipisicing elit")
