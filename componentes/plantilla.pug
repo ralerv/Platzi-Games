@@ -1,14 +1,4 @@
-//- Mixins
-mixin caja(imagen,titulo,contenido)
-    .caja
-        .caja__imagen: img(src="./images/"+imagen)
-        .caja__contenido
-            h2=titulo
-            p=contenido
-
-
--var titulo = "Titulo Principal"
--var titulos = ["Subtitlo 1", "Subtitulo 2", "Subtitulo 3"]
+include config.pug
 doctype html
 html(lang="en")
     include head.pug
@@ -20,3 +10,4 @@ html(lang="en")
             else
                 a.boton Registro
         block contenidos
+        include footer.pug
