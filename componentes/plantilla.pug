@@ -1,0 +1,22 @@
+//- Mixins
+mixin caja(imagen,titulo,contenido)
+    .caja
+        .caja__imagen: img(src="./images/"+imagen)
+        .caja__contenido
+            h2=titulo
+            p=contenido
+
+
+-var titulo = "Titulo Principal"
+-var titulos = ["Subtitlo 1", "Subtitulo 2", "Subtitulo 3"]
+doctype html
+html(lang="en")
+    include head.pug
+    body
+        header
+            h1 Platzi Games
+            if usuario
+                a Hola #{usuario}
+            else
+                a.boton Registro
+    block contenidos

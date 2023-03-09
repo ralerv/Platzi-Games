@@ -1,29 +1,5 @@
-//- Mixins
-mixin caja(imagen,titulo,contenido)
-    .caja
-        .caja__imagen: img(src="./images/"+imagen)
-        .caja__contenido
-            h2=titulo
-            p=contenido
-
-
--var titulo = "Titulo Principal"
--var titulos = ["Subtitlo 1", "Subtitulo 2", "Subtitulo 3"]
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Platzi Games - Ralerv Version
-        link(rel="stylesheet", href="./css/ejercicio-pug.css")
-    body
-        header
-            h1 Platzi Games
-            if usuario
-                a Hola #{usuario}
-            else
-                a.boton Registro
+extend componentes/plantilla.pug
+block contenidos
         section.intro 
             div.intro__imagen: img(src="./images/imagen.png", alt="default-img")
             .intro__contenido 
