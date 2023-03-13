@@ -16,13 +16,30 @@ $color-variacion: #3f579a;
 	@return rgba($color: $color, $alpha: $nivel);
 }
 
+@mixin titulos($fuentes){
+	@if $fuentes == $Fuente1 {
+		font-family: $Fuente1;
+	}
+	@if $fuentes == $Fuente2{
+		font-family: $Fuente2;
+		text-transform: uppercase;
+	}
+}
+
+@each $header, $size in (h1: 30px, h2: 25px, h3: 20px){
+	#{$header} {
+		font-size: $size;
+		margin: 0;
+	}
+}
+
 * {
 	box-sizing: border-box;
 }
 
 body {
 	margin: 0;
-	font-family: $Fuente1;
+	@include titulos ($Fuente1);
 }
 
 main {
