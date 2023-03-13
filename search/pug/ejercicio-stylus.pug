@@ -1,6 +1,6 @@
-html
-	include head.pug
-	body
+extend head.pug
+block body
+	main 
 		.buscador: form: input(type="text" placeholder="Playstation" class="buscador__input")
 		header.encabezado--con-filtros
 			h2 20 Resultados para "Playstation"
