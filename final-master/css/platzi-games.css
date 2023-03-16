@@ -1168,4 +1168,32 @@ main {
   color: rgba(51, 51, 51, 0.5);
 }
 
+.banner--homepage {
+  max-width: 300px;
+  padding: 50px;
+  color: #FFF;
+  background-color: #8841DA;
+}
+.banner--homepage h3 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.banner--homepage .button {
+  padding: 10px;
+  height: 50px;
+  border: 2px solid #FFF;
+  border-radius: 5px;
+  background-color: rgba(51, 51, 51, 0.5);
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 /*# sourceMappingURL=platzi-games.css.map */
